@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    public int hp; //hp stat
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +17,14 @@ public class Player : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //Detect and consume water droplet
+        if(other.GetComponent<Pickup>()){
+            other.enabled = false;
+            Debug.Log("Drank Water!");
+        }
     }
 }
