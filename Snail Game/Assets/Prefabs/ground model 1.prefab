@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 6641508194023905272}
   - component: {fileID: 8939648703325409998}
   - component: {fileID: 7290027881658929915}
+  - component: {fileID: 6184014700653502975}
   m_Layer: 0
   m_Name: Ground Mesh
   m_TagString: Untagged
@@ -110,3 +111,14 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!154 &6184014700653502975
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5059206902931993350}
+  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_TerrainData: {fileID: 0}
+  m_EnableTreeColliders: 1
