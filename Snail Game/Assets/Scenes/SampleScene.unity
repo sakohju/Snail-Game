@@ -652,8 +652,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.1963463, y: 3.8284836, z: 7.4628224}
-  m_Center: {x: 1.5851963, y: 1.0886002, z: 5.9693456}
+  m_Size: {x: 3.957096, y: 2.6575508, z: 7.4628224}
+  m_Center: {x: 0.43106472, y: 0.5031338, z: 5.9692826}
 --- !u!135 &804845274
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -782,6 +782,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &804845278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804845272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34507db12ed124b368fe53be24b23207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &961966064 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1020338774929262674, guid: 6fbb3f35d08a6441d8854e6ce3925341,
@@ -1111,7 +1123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024527078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.86, y: 11.511811, z: 23.99}
+  m_LocalPosition: {x: 29.81, y: 4.72, z: 13.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

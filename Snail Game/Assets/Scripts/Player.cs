@@ -75,7 +75,6 @@ public class Player : MonoBehaviour
                 controller.SimpleMove(forward * curSpeed); */
 
             groundedPlayer = controller.isGrounded;
-            Debug.Log(groundedPlayer);
             if (groundedPlayer && playerVelocity.y < 0)
             {
                 playerVelocity.y = 0f;
@@ -111,8 +110,6 @@ public class Player : MonoBehaviour
                 animator.SetBool("Idle", true);
             }
         }
-
-        Debug.Log(hp);
     }
 
 

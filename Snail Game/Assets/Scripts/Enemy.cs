@@ -6,12 +6,15 @@ public class Enemy : MonoBehaviour
 {
     private Animator animator;
     private AudioSource caw;
+    private BoxCollider hitZone;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = this.GetComponent<Animator>();
         caw = this.GetComponent<AudioSource>();
+        hitZone = this.GetComponent<BoxCollider>();
+        hitZone.enabled = false;
     }
 
     // Update is called once per frame
@@ -24,9 +27,9 @@ public class Enemy : MonoBehaviour
     {
         if (other.GetComponent<Player>() != null)
         {
-            Debug.Log("Player detected");
             animator.SetTrigger("Attack");
             caw.Play();
+            hitZone.enabled = true;
         }
     }
 }

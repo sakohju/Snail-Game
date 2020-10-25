@@ -37,6 +37,5 @@ public class Scenes : MonoBehaviour
                 SceneManager.LoadSceneAsync(0);
             }
         }
-        Debug.Log(SceneManager.GetActiveScene().buildIndex);
     }
 }
