@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class Player : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class Player : MonoBehaviour
     public float enemyDamage; //amount of damage taken from birds
 
     public AudioSource crunch; //sound when taking damage
+    public TMP_Text hpText; //text displaying HP
 
     private bool groundedPlayer; //boolean if the snail is on the ground or climbing
     private bool inShell; //boolean true if retracted in shell, false if not
@@ -37,6 +40,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        hpText.text = "HP: " + hp; //update HP display
 
         if (Input.GetKey(KeyCode.Escape))
         {
