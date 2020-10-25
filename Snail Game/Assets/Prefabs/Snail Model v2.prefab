@@ -794,9 +794,10 @@ MonoBehaviour:
   speed: 1
   rotateSpeed: 0.5
   defense: 10
-  sunDamage: 0.01
+  sunDamage: 0.05
   enemyDamage: 10
   crunch: {fileID: 4794179815713020910}
+  hpText: {fileID: 0}
 --- !u!1 &4846949051132113890
 GameObject:
   m_ObjectHideFlags: 0
