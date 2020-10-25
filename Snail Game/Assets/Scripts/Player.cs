@@ -5,9 +5,11 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    public int hp; //hp stat
+    public float hp; //hp stat
     public float speed; //speed 
     public float rotateSpeed;
+    public int defense; //defense
+    public float sunDamage; //amount of damage taken from sun
 
     private bool groundedPlayer; //boolean if the snail is on the ground or climbing
     private bool inShell; //boolean true if retracted in shell, false if not
@@ -72,6 +74,7 @@ public class Player : MonoBehaviour
                 controller.SimpleMove(forward * curSpeed); */
 
             groundedPlayer = controller.isGrounded;
+            Debug.Log(groundedPlayer);
             if (groundedPlayer && playerVelocity.y < 0)
             {
                 playerVelocity.y = 0f;
@@ -107,16 +110,30 @@ public class Player : MonoBehaviour
                 animator.SetBool("Idle", true);
             }
         }
+
+        Debug.Log(hp);
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
         //Detect and consume water droplet
-        if(other.GetComponent<Pickup>()){
-            other.enabled = false;
+        if(other.GetComponent<Pickup>() != null){
             hp += other.GetComponent<Pickup>().healAmount;
+            other.enabled = false;
         }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.GetComponent<Light>() != null){
+            hp -= sunDamage;
+        }
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        
     }
 
 }
