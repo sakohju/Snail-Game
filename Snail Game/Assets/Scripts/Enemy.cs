@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     private Animator animator;
     private AudioSource caw;
-    private BoxCollider hitZone;
+    public BoxCollider hitZone;
 
     // Start is called before the first frame update
     void Start()
@@ -31,5 +31,10 @@ public class Enemy : MonoBehaviour
             caw.Play();
             hitZone.enabled = true;
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        hitZone.enabled = false;
     }
 }

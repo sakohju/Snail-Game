@@ -12,11 +12,13 @@ public class Player : MonoBehaviour
     public float sunDamage; //amount of damage taken from sun
     public float enemyDamage; //amount of damage taken from birds
 
+    public AudioSource crunch; //sound when taking damage
+
     private bool groundedPlayer; //boolean if the snail is on the ground or climbing
     private bool inShell; //boolean true if retracted in shell, false if not
     private AudioSource retractsound; //shell retract sound effect
     private Vector3 playerVelocity;
-    public float jumpHeight = 1.0f;
+    private float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
 
     private Animator animator;
@@ -120,6 +122,20 @@ public class Player : MonoBehaviour
             hp += other.GetComponent<Pickup>().healAmount;
             other.gameObject.SetActive(false);
             retractsound.Play();
+        }
+
+        Enemy enemy = other.GetComponent<Enemy>();
+        if(enemy != null){
+            //take damage from birds
+            if(other == enemy.hitZone){
+                if(inShell){
+                    hp -= enemyDamage / 2;
+                }
+                else{
+                    hp -= enemyDamage;
+                }
+                crunch.Play();
+            }
         }
     }
 
