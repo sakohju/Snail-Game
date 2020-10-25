@@ -38,4 +38,8 @@ public class Scenes : MonoBehaviour
             }
         }
     }
+
+    public void WinScene(){
+        SceneManager.LoadSceneAsync(2);
+    }
 }
