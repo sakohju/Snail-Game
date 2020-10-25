@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{86DF8D9F-4A66-C7F0-C8E2-92CC401C340E}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Pickup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Scenes.cs">
     <Files>
       <File FileName="Assets/Scripts/Enemy.cs" Line="24" Column="10" />
-      <File FileName="Assets/Scripts/Player.cs" Line="84" Column="21" />
+      <File FileName="Assets/Scripts/Player.cs" Line="137" Column="6" />
       <File FileName="Assets/Scripts/CameraController.cs" Line="25" Column="62" />
       <File FileName="Assets/Scripts/Pickup.cs" Line="7" Column="27" />
+      <File FileName="Assets/Scripts/Scenes.cs" Line="3" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
