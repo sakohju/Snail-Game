@@ -81,7 +81,10 @@ public class Player : MonoBehaviour
         //Detect and consume water droplet
         if(other.GetComponent<Pickup>()){
             other.enabled = false;
+            hp += 5;
             Debug.Log("Drank Water!");
         }
     }
+
+
 }
