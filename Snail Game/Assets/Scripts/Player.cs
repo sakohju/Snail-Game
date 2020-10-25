@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public float rotateSpeed;
     public int defense; //defense
     public float sunDamage; //amount of damage taken from sun
+    public float enemyDamage; //amount of damage taken from birds
 
     private bool groundedPlayer; //boolean if the snail is on the ground or climbing
     private bool inShell; //boolean true if retracted in shell, false if not
@@ -120,14 +121,18 @@ public class Player : MonoBehaviour
         //Detect and consume water droplet
         if(other.GetComponent<Pickup>() != null){
             hp += other.GetComponent<Pickup>().healAmount;
-            other.enabled = false;
+            other.gameObject.SetActive(false);
+            retractsound.Play();
         }
     }
 
     private void OnTriggerStay(Collider other)
     {
         if(other.GetComponent<Light>() != null){
-            hp -= sunDamage;
+            if (!inShell)
+            {
+                hp -= sunDamage;
+            }
         }
     }
 
